@@ -3,7 +3,7 @@
   "defaultVariables": null,
   "documentGenerator": {
     "aspNetCoreToOpenApi": {
-      "project": "$(ProjectFileName)",
+      "project": "$(SolutionName).WebApi.csproj",
       "msBuildProjectExtensionsPath": null,
       "configuration": null,
       "runtime": null,
@@ -107,7 +107,7 @@
       "wrapResponseMethods": [],
       "generateResponseClasses": true,
       "responseClass": "SwaggerResponse",
-      "namespace": "$(RestClientProjectName).Infrastructure.RestClient",
+      "namespace": "$(SolutionName).Infrastructure.RestClient",
       "requiredPropertiesMustBeDefined": true,
       "dateType": "System.DateTimeOffset",
       "jsonConverters": null,
@@ -144,7 +144,7 @@
       "enumNameGeneratorType": null,
       "serviceHost": null,
       "serviceSchemes": null,
-      "output": "../$(RestClientProjectName).Infrastructure.RestClient/Client.cs",
+      "output": "../$(SolutionName).Infrastructure.RestClient/Client.cs",
       "newLineBehavior": "Auto"
     }
   }
