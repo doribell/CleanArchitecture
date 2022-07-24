@@ -3,7 +3,7 @@
   "defaultVariables": null,
   "documentGenerator": {
     "aspNetCoreToOpenApi": {
-      "project": "CleanArchitecture.WebUI.csproj",
+      "project": "$(ProjectFileName)",
       "msBuildProjectExtensionsPath": null,
       "configuration": null,
       "runtime": null,
