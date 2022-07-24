@@ -22,13 +22,11 @@ namespace CleanArchitecture.Infrastructure.RestClient
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.16.1.0 (NJsonSchema v10.7.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class TodoItemsClient : ITodoItemsClient
     {
-        private string _baseUrl = "";
         private System.Net.Http.HttpClient _httpClient;
         private System.Lazy<Newtonsoft.Json.JsonSerializerSettings> _settings;
 
-        public TodoItemsClient(string baseUrl, System.Net.Http.HttpClient httpClient)
+        public TodoItemsClient(System.Net.Http.HttpClient httpClient)
         {
-            BaseUrl = baseUrl;
             _httpClient = httpClient;
             _settings = new System.Lazy<Newtonsoft.Json.JsonSerializerSettings>(CreateSerializerSettings);
         }
@@ -38,12 +36,6 @@ namespace CleanArchitecture.Infrastructure.RestClient
             var settings = new Newtonsoft.Json.JsonSerializerSettings();
             UpdateJsonSerializerSettings(settings);
             return settings;
-        }
-
-        public string BaseUrl
-        {
-            get { return _baseUrl; }
-            set { _baseUrl = value; }
         }
 
         protected Newtonsoft.Json.JsonSerializerSettings JsonSerializerSettings { get { return _settings.Value; } }
@@ -65,7 +57,7 @@ namespace CleanArchitecture.Infrastructure.RestClient
         public virtual async System.Threading.Tasks.Task<PaginatedListOfTodoItemBriefDto> GetTodoItemsWithPaginationAsync(int? listId, int? pageNumber, int? pageSize, System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/TodoItems?");
+            urlBuilder_.Append("api/TodoItems?");
             if (listId != null)
             {
                 urlBuilder_.Append(System.Uri.EscapeDataString("ListId") + "=").Append(System.Uri.EscapeDataString(ConvertToString(listId, System.Globalization.CultureInfo.InvariantCulture))).Append("&");
@@ -153,7 +145,7 @@ namespace CleanArchitecture.Infrastructure.RestClient
                 throw new System.ArgumentNullException("command");
 
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/TodoItems");
+            urlBuilder_.Append("api/TodoItems");
 
             var client_ = _httpClient;
             var disposeClient_ = false;
@@ -234,7 +226,7 @@ namespace CleanArchitecture.Infrastructure.RestClient
                 throw new System.ArgumentNullException("command");
 
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/TodoItems/{id}");
+            urlBuilder_.Append("api/TodoItems/{id}");
             urlBuilder_.Replace("{id}", System.Uri.EscapeDataString(ConvertToString(id, System.Globalization.CultureInfo.InvariantCulture)));
 
             var client_ = _httpClient;
@@ -311,7 +303,7 @@ namespace CleanArchitecture.Infrastructure.RestClient
                 throw new System.ArgumentNullException("id");
 
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/TodoItems/{id}");
+            urlBuilder_.Append("api/TodoItems/{id}");
             urlBuilder_.Replace("{id}", System.Uri.EscapeDataString(ConvertToString(id, System.Globalization.CultureInfo.InvariantCulture)));
 
             var client_ = _httpClient;
@@ -385,7 +377,7 @@ namespace CleanArchitecture.Infrastructure.RestClient
                 throw new System.ArgumentNullException("command");
 
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/TodoItems/UpdateItemDetails?");
+            urlBuilder_.Append("api/TodoItems/UpdateItemDetails?");
             if (id != null)
             {
                 urlBuilder_.Append(System.Uri.EscapeDataString("id") + "=").Append(System.Uri.EscapeDataString(ConvertToString(id, System.Globalization.CultureInfo.InvariantCulture))).Append("&");
@@ -558,13 +550,11 @@ namespace CleanArchitecture.Infrastructure.RestClient
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.16.1.0 (NJsonSchema v10.7.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class TodoListsClient : ITodoListsClient
     {
-        private string _baseUrl = "";
         private System.Net.Http.HttpClient _httpClient;
         private System.Lazy<Newtonsoft.Json.JsonSerializerSettings> _settings;
 
-        public TodoListsClient(string baseUrl, System.Net.Http.HttpClient httpClient)
+        public TodoListsClient(System.Net.Http.HttpClient httpClient)
         {
-            BaseUrl = baseUrl;
             _httpClient = httpClient;
             _settings = new System.Lazy<Newtonsoft.Json.JsonSerializerSettings>(CreateSerializerSettings);
         }
@@ -574,12 +564,6 @@ namespace CleanArchitecture.Infrastructure.RestClient
             var settings = new Newtonsoft.Json.JsonSerializerSettings();
             UpdateJsonSerializerSettings(settings);
             return settings;
-        }
-
-        public string BaseUrl
-        {
-            get { return _baseUrl; }
-            set { _baseUrl = value; }
         }
 
         protected Newtonsoft.Json.JsonSerializerSettings JsonSerializerSettings { get { return _settings.Value; } }
@@ -601,7 +585,7 @@ namespace CleanArchitecture.Infrastructure.RestClient
         public virtual async System.Threading.Tasks.Task<TodosVm> GetAsync(System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/TodoLists");
+            urlBuilder_.Append("api/TodoLists");
 
             var client_ = _httpClient;
             var disposeClient_ = false;
@@ -676,7 +660,7 @@ namespace CleanArchitecture.Infrastructure.RestClient
                 throw new System.ArgumentNullException("command");
 
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/TodoLists");
+            urlBuilder_.Append("api/TodoLists");
 
             var client_ = _httpClient;
             var disposeClient_ = false;
@@ -754,7 +738,7 @@ namespace CleanArchitecture.Infrastructure.RestClient
                 throw new System.ArgumentNullException("id");
 
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/TodoLists/{id}");
+            urlBuilder_.Append("api/TodoLists/{id}");
             urlBuilder_.Replace("{id}", System.Uri.EscapeDataString(ConvertToString(id, System.Globalization.CultureInfo.InvariantCulture)));
 
             var client_ = _httpClient;
@@ -831,7 +815,7 @@ namespace CleanArchitecture.Infrastructure.RestClient
                 throw new System.ArgumentNullException("command");
 
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/TodoLists/{id}");
+            urlBuilder_.Append("api/TodoLists/{id}");
             urlBuilder_.Replace("{id}", System.Uri.EscapeDataString(ConvertToString(id, System.Globalization.CultureInfo.InvariantCulture)));
 
             var client_ = _httpClient;
@@ -908,7 +892,7 @@ namespace CleanArchitecture.Infrastructure.RestClient
                 throw new System.ArgumentNullException("id");
 
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/TodoLists/{id}");
+            urlBuilder_.Append("api/TodoLists/{id}");
             urlBuilder_.Replace("{id}", System.Uri.EscapeDataString(ConvertToString(id, System.Globalization.CultureInfo.InvariantCulture)));
 
             var client_ = _httpClient;
@@ -1074,13 +1058,11 @@ namespace CleanArchitecture.Infrastructure.RestClient
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.16.1.0 (NJsonSchema v10.7.2.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class WeatherForecastClient : IWeatherForecastClient
     {
-        private string _baseUrl = "";
         private System.Net.Http.HttpClient _httpClient;
         private System.Lazy<Newtonsoft.Json.JsonSerializerSettings> _settings;
 
-        public WeatherForecastClient(string baseUrl, System.Net.Http.HttpClient httpClient)
+        public WeatherForecastClient(System.Net.Http.HttpClient httpClient)
         {
-            BaseUrl = baseUrl;
             _httpClient = httpClient;
             _settings = new System.Lazy<Newtonsoft.Json.JsonSerializerSettings>(CreateSerializerSettings);
         }
@@ -1090,12 +1072,6 @@ namespace CleanArchitecture.Infrastructure.RestClient
             var settings = new Newtonsoft.Json.JsonSerializerSettings();
             UpdateJsonSerializerSettings(settings);
             return settings;
-        }
-
-        public string BaseUrl
-        {
-            get { return _baseUrl; }
-            set { _baseUrl = value; }
         }
 
         protected Newtonsoft.Json.JsonSerializerSettings JsonSerializerSettings { get { return _settings.Value; } }
@@ -1117,7 +1093,7 @@ namespace CleanArchitecture.Infrastructure.RestClient
         public virtual async System.Threading.Tasks.Task<System.Collections.Generic.ICollection<WeatherForecast>> GetAsync(System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/WeatherForecast");
+            urlBuilder_.Append("api/WeatherForecast");
 
             var client_ = _httpClient;
             var disposeClient_ = false;

@@ -1,4 +1,4 @@
-namespace CleanArchitecture.WasmUI.Models.Options;
+namespace CleanArchitecture.BlazorUI.Models.Options;
 
 public class Settings
 {
