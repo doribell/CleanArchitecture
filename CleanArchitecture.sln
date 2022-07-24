@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitecture.WebApi", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitecture.Infrastructure.RestClient", "src\CleanArchitecture.Infrastructure.RestClient\CleanArchitecture.Infrastructure.RestClient.csproj", "{97DA84C9-89A8-43A4-BF9E-9B47386CD038}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitecture.WasmUI", "src\CleanArchitecture.WasmUI\CleanArchitecture.WasmUI.csproj", "{703E15AF-120D-4410-85F1-00A349A8E6EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,10 @@ Global
 		{97DA84C9-89A8-43A4-BF9E-9B47386CD038}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97DA84C9-89A8-43A4-BF9E-9B47386CD038}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97DA84C9-89A8-43A4-BF9E-9B47386CD038}.Release|Any CPU.Build.0 = Release|Any CPU
+		{703E15AF-120D-4410-85F1-00A349A8E6EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{703E15AF-120D-4410-85F1-00A349A8E6EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{703E15AF-120D-4410-85F1-00A349A8E6EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{703E15AF-120D-4410-85F1-00A349A8E6EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,6 +94,7 @@ Global
 		{712BEC26-420A-40F8-8C79-FD6896353D71} = {664D406C-2F83-48F0-BFC3-408D5CB53C65}
 		{BD8BACC7-4D5A-44AC-A666-BD45359D1FAA} = {6ED356A7-8B47-4613-AD01-C85CF28491BD}
 		{97DA84C9-89A8-43A4-BF9E-9B47386CD038} = {6ED356A7-8B47-4613-AD01-C85CF28491BD}
+		{703E15AF-120D-4410-85F1-00A349A8E6EF} = {6ED356A7-8B47-4613-AD01-C85CF28491BD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3CB609D9-5D54-4C11-A371-DAAC8B74E430}

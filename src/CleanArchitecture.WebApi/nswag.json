@@ -65,7 +65,7 @@
       "clientBaseClass": null,
       "configurationClass": null,
       "generateClientClasses": true,
-      "generateClientInterfaces": false,
+      "generateClientInterfaces": true,
       "clientBaseInterface": null,
       "injectHttpClient": true,
       "disposeHttpClient": true,
@@ -83,9 +83,9 @@
       "exposeJsonSerializerSettings": false,
       "clientClassAccessModifier": "public",
       "typeAccessModifier": "public",
-      "generateContractsOutput": false,
-      "contractsNamespace": null,
-      "contractsOutputFilePath": null,
+      "generateContractsOutput": true,
+      "contractsNamespace": "$(SolutionName).Infrastructure.RestClient",
+      "contractsOutputFilePath": "../$(SolutionName).Infrastructure.RestClient/Contracts.cs",
       "parameterDateTimeFormat": "s",
       "parameterDateFormat": "yyyy-MM-dd",
       "generateUpdateJsonSerializerSettingsMethod": true,
@@ -144,7 +144,7 @@
       "enumNameGeneratorType": null,
       "serviceHost": null,
       "serviceSchemes": null,
-      "output": "../$(SolutionName).Infrastructure.RestClient/Client.cs",
+      "output": "../$(SolutionName).Infrastructure.RestClient/Clients.cs",
       "newLineBehavior": "Auto"
     }
   }

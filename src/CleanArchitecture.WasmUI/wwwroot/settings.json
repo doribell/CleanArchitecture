@@ -1,0 +1,5 @@
+{
+  "Test": {
+    "BaseAddress": "http://localost:7074/"
+  }
+}
