@@ -24,13 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="app.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
     <AdditionalFiles Include="Areas\Identity\Pages\Account\LogOut.cshtml" />
     <AdditionalFiles Include="Areas\Identity\Pages\Shared\_LoginPartial.cshtml" />
   </ItemGroup>
