@@ -1,0 +1,12 @@
+﻿<AuthorizeView>
+    <Authorized>
+        <MudButton Variant="Variant.Text" Href="Identity/Account/Manage" Target="_blank">Hello, @context.User.Identity?.Name!</MudButton>
+        <form method="post" action="Identity/Account/LogOut">
+            <button type="submit" class="nav-link btn btn-link">Log out</button>
+        </form>
+    </Authorized>
+    <NotAuthorized>
+        <MudButton Variant="Variant.Text" Href="Identity/Account/Register" Target="_blank">Register</MudButton>
+        <MudButton Variant="Variant.Text" Href="Identity/Account/Login" Target="_blank">Log in</MudButton>
+    </NotAuthorized>
+</AuthorizeView>

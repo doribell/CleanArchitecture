@@ -3,6 +3,7 @@ using CleanArchitecture.Application.Common.Behaviours;
 using FluentValidation;
 using MediatR;
 
+// ReSharper disable once CheckNamespace
 namespace Microsoft.Extensions.DependencyInjection;
 
 public static class ConfigureServices
