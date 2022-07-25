@@ -8,8 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CleanArchitecture.WebApi.Controllers;
 
-//[Authorize]
-[AllowAnonymous]
+[Authorize]
 public class TodoListsController : ApiControllerBase
 {
     [HttpGet]
