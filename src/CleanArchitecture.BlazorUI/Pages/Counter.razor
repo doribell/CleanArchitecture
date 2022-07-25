@@ -1,6 +1,4 @@
 ﻿@page "/counter"
-@using CleanArchitecture.Infrastructure.RestClient
-@inject TodoItemsClient Client;
 
 <PageTitle>Counter</PageTitle>
 
@@ -14,8 +12,6 @@
 
     private void IncrementCount()
     {
-        var result = Client.GetTodoItemsWithPaginationAsync(1, 1, 10).Result;
-
         currentCount++;
     }
 }
